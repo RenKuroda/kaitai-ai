@@ -5,7 +5,8 @@ import { GeminiImagePart, GeminiTextPart } from "../types";
 
 
 const getApiKey = (): string => {
-  const apiKey = process.env.API_KEY;
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+
   if (!apiKey) {
     // This is a placeholder for development.
     // In a real application, the API key must be securely managed and present.
