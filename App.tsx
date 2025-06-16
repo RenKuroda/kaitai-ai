@@ -120,7 +120,7 @@ const App: React.FC = () => {
             disabled={isLoading || uploadedImages.length === 0}
             className="px-8 py-3 bg-gradient-to-r from-sky-500 to-cyan-500 hover:from-sky-600 hover:to-cyan-600 text-white font-semibold rounded-lg shadow-md disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-75"
           >
-            {isLoading ? '現調中...' : '解体現調'}
+            {isLoading ? '現調中...' : '解体現調する'}
           </button>
         </div>
 
