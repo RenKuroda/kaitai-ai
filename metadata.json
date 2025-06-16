@@ -1,0 +1,6 @@
+{
+  "name": "解体見積もりAI",
+  "description": "複数の建物の写真をアップロードして、解体に必要な見積もり情報をAIが分析・表示します。",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
