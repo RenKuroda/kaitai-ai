@@ -54,7 +54,7 @@ const App: React.FC = () => {
     // Check for API key (it's expected to be in process.env)
     // This check is more illustrative in a frontend context as `process.env` is build-time.
     // In a real scenario, this key would be handled securely, possibly via a backend proxy.
-    if (!process.env.API_KEY) {
+    if (!import.meta.env.VITE_GEMINI_API_KEY) {
         setError("APIキーが設定されていません。環境変数 API_KEY を設定してください。");
         setIsLoading(false);
         // In a real app, you might want to log this or handle it differently.
