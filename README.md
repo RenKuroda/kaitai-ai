@@ -17,3 +17,4 @@ This contains everything you need to run your app locally.
 
 
 追加したよ！
+また追加
