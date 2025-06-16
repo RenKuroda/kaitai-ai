@@ -83,9 +83,9 @@ const App: React.FC = () => {
     } catch (err) {
       console.error("Error getting estimation:", err);
       if (err instanceof Error) {
-        setError(`見積もり取得中にエラーが発生しました: ${err.message}`);
+        setError(`現調中にエラーが発生しました: ${err.message}`);
       } else {
-        setError("見積もり取得中に不明なエラーが発生しました。");
+        setError("現調中に不明なエラーが発生しました。");
       }
     } finally {
       setIsLoading(false);
@@ -96,9 +96,9 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-700 text-gray-100 p-4 sm:p-8 flex flex-col items-center">
       <header className="w-full max-w-4xl mb-8 text-center">
         <h1 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-300">
-          解体見積もりAI
+          解体現調AI
         </h1>
-        <p className="mt-2 text-lg text-slate-300">建物の写真をアップロードして、AIによる解体費用見積もりを取得します。</p>
+        <p className="mt-2 text-lg text-slate-300">建物の写真をアップロードして、AIによる解体情報を取得します。</p>
       </header>
 
       <main className="w-full max-w-4xl bg-slate-800 shadow-2xl rounded-lg p-6 sm:p-8">
@@ -120,7 +120,7 @@ const App: React.FC = () => {
             disabled={isLoading || uploadedImages.length === 0}
             className="px-8 py-3 bg-gradient-to-r from-sky-500 to-cyan-500 hover:from-sky-600 hover:to-cyan-600 text-white font-semibold rounded-lg shadow-md disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-75"
           >
-            {isLoading ? '見積もり中...' : '解体費用を見積もる'}
+            {isLoading ? '現調中...' : '解体現調'}
           </button>
         </div>
 
@@ -130,8 +130,8 @@ const App: React.FC = () => {
       </main>
 
       <footer className="w-full max-w-4xl mt-12 text-center text-sm text-slate-400">
-        <p>&copy; {new Date().getFullYear()} 解体見積もりAI. Gemini API を利用しています。</p>
-        <p className="mt-1">この見積もりはAIによる推定であり、実際の金額とは異なる場合があります。正確な見積もりは専門業者にご相談ください。</p>
+        <p>&copy; {new Date().getFullYear()} 解体現調AI. Gemini API を利用しています。</p>
+        <p className="mt-1">この算出結果はAIによる推定であり、実際とは異なる場合があります。正確な情報は専門業者にご相談ください。</p>
       </footer>
     </div>
   );
